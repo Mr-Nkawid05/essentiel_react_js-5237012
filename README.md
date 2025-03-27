@@ -22,20 +22,26 @@ La branche master correspond au code à la fin de la formation.
 ## Installation
 
 1. Pour utiliser ces fichiers d’exercice, vous avez besoin de : 
-   - [Liste des logiciels/dépendances utiles à la formation] 
-2. Clonez ce dossier Repository sur votre machine locale (Mac), CMD (Windows), ou sur un outil GUI tel que SourceTree. 
-3. [Instructions spécifiques au cours] 
+   - [**Visual Studio Code**](https://code.visualstudio.com/): 
+   éditeur de code source développé par Microsoft ;
 
+   - [**Les React Developer Tools**](https://react.dev/learn/react-developer-tools): extension de navigateur utilisé pour inspecter et de déboguer les applications React;
+
+   - [**NodeJS**](https://nodejs.org/en/download): environnement d’exécution JavaScript qui permet d’exécuter du code JavaScript en dehors d’un navigateur, généralement sur un serveur et **[npm]**:(gestionnaire de paquets Node.js pour installer les bibliothèques et frameworks JavaScript);
+
+   - [**Vite**](https://vite.dev/guide/using-plugins.html): outil de développement (*build tool*) moderne pour démarrer et lancer les applications React, spécialement conçu pour améliorer la rapidité du développement. 
+
+2. Clonez ce dossier Repository sur votre machine locale (Mac), CMD (Windows), ou sur un outil GUI tel que SourceTree. 
+3. [Instructions spécifiques au cours] *TBC* 
 
 ### Formateur
 
-**Nom du formateur** 
+**Sandy Ludosky**
 
- Retrouvez mes autres formations sur [LinkedIn Learning][lil-URL-trainer].
+Retrouvez mes autres formations sur [LinkedIn Learning](https://www.linkedin.com/learning/instructors/sandy-ludosky).
 
-[0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQG0eDHsyOSqTA/learning-public-crop_675_1200/B4EZVdqqdwHUAY-/0/1741033220778?e=2147483647&v=beta&t=FxUDo6FA8W8CiFROwqfZKL_mzQhYx9loYLfjN-LNjgA
-[lil-URL-trainer]: https://
-
-[1]: # (End of FR-Instruction ###############################################################################################)
+[0]: # "Replace these placeholder URLs with actual course URLs"
+[lil-course-url]: https://www.linkedin.com/learning/l-essentiel-d-openai-et-des-modeles-de-langage-gpt
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/D560DAQE2ATCfAQa_ng/learning-public-crop_675_1200/0/1685088353869?e=2147483647&v=beta&t=XsFBytWpLDvh5XqzP91VJVw9NM5zDP85c_fvj4nVyIg
+[lil-URL-trainer]: https://www.linkedin.com/learning/instructors/sandy-ludosky
+[1]: # "End of FR-Instruction ###############################################################################################"
