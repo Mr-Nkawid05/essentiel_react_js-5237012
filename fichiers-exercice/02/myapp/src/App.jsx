@@ -17,9 +17,10 @@ function App() {
         </a>
       </div>
       <h1>Mon Premier Projet React</h1>
+      <h2>J'aime le JSX</h2>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          count is {2 + 2}
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
