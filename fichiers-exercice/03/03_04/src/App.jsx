@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 function Header() {
@@ -16,7 +17,7 @@ function Header() {
   )
 }
 function CountdownTimer() {
-  const [time, setTime] = useState();
+  const [time, setTime] = useState(10);
   const start = () => {
     if (time > 0) {
       const timer = setInterval(() => {
@@ -47,7 +48,7 @@ function Counter() {
   </div>)
 }
 function Title({ content }) {
-  return <h1>{content}</h1>
+  return <h1 className="text-success">{content}</h1>
 }
 
 function Footer() {
@@ -61,7 +62,7 @@ function App() {
     <>
       <Title content="CountdownTimer " />
       <CountdownTimer />
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
