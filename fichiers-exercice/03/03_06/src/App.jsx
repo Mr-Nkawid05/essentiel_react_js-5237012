@@ -27,6 +27,8 @@ function CountdownTimer() {
     }
   }
 
+  //reset
+  const reset = () => setTime(10)
 
   return (
     <>
