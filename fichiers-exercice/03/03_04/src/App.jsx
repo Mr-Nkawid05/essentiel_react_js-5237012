@@ -15,12 +15,30 @@ function Header() {
     </>
   )
 }
+function CountdownTimer() {
+  const [time, setTime] = useState();
+  const start = () => {
+    if (time > 0) {
+      const timer = setInterval(() => {
+        setTime((prevTime) => prevTime - 1);
+      }, 1000);
+      return () => clearInterval(timer);
+    }
+  }
+
+  return (
+    <>
+      <p>{time} seconds</p>
+      <button className="btn btn-outline-secondary" onClick={start}>Go!</button>
+    </>
+  );
+}
 
 function Counter() {
-  const [count, setCount] = useState(2)
+  const [count, setCount] = useState(5)
 
   return (<div className="card">
-    <button onClick={() => setCount((count) => count + 1)}>
+    <button onClick={() => setCount((count) => count - 1)}>
       count is {count}
     </button>
     <p>
@@ -41,9 +59,8 @@ function Footer() {
 function App() {
   return (
     <>
-      <Header />
-      <Title content="Mon Premier Projet React" />
-      <Counter />
+      <Title content="CountdownTimer " />
+      <CountdownTimer />
       <Footer />
     </>
   )
