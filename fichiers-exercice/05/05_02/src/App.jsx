@@ -29,7 +29,7 @@ function TodoApp() {
     if (newTodo.trim() === "") return;
     setTodos(prev => [...prev, { text: newTodo, completed: false }]);
     setNewTodo("");
-  }, [setTodos, setNewTodo]);
+  }, [setTodos, setNewTodo, newTodo]);
 
   // Toggle completed status (memoized)
   const toggleTodo = useCallback(index => {
