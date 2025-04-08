@@ -6,13 +6,12 @@ import './App.css'
 const CountdownTimer = () => {
   const [time, setTime] = useState(10);
   const [color, setColor] = useState('text-dark');
-
+  const [isVisible, setVisible] = useState(false)
 
   const start = () => {
     if (time > 0) {
       const timer = setInterval(() => {
         setTime((prevTime) => prevTime - 1);
-        setColor(time < 0 ? 'text-danger' : 'text-dark')
       }, 1000);
       return () => clearInterval(timer);
     }
@@ -20,6 +19,15 @@ const CountdownTimer = () => {
   const increment = () => setTime((prevTime) => prevTime + 1);
   const decrement = () => setTime((prevTime) => prevTime - 1);
 
+  useEffect(() => {
+    // side effect
+    setColor(time < 0 ? 'text-danger' : 'text-dark')
+  }, [time])
+
+  useEffect(() => {
+    // side effect
+    setVisible(time < 0)
+  }, [time])
   return (
     <div className="text-center">
       <h4><span className={color}>{time} </span>seconds</h4>
@@ -34,6 +42,7 @@ const CountdownTimer = () => {
           +
         </button>
       </div>
+      {isVisible && <p className='mt-2 text-danger'>Time's Up!</p>}
     </div>
   );
 };
