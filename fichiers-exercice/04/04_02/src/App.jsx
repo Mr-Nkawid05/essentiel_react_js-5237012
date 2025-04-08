@@ -5,11 +5,13 @@ import './App.css'
 
 const CountdownTimer = () => {
   const [time, setTime] = useState(10);
+  const [color, setColor] = useState('text-dark');
 
   const start = () => {
     if (time > 0) {
       const timer = setInterval(() => {
         setTime((prevTime) => prevTime - 1);
+        setColor(time < 0 ? 'text-danger' : 'text-dark')
       }, 1000);
       return () => clearInterval(timer);
     }
@@ -19,7 +21,7 @@ const CountdownTimer = () => {
 
   return (
     <div className="text-center">
-      <h4>{time} seconds</h4>
+      <h4><span className={color}>{time} </span>seconds</h4>
       <div className="btn-group mt-3">
         <button className="btn btn-danger" onClick={decrement}>
           -
