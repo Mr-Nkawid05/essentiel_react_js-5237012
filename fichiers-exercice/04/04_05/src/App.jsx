@@ -7,7 +7,6 @@ const CountdownTimer = () => {
   const [time, setTime] = useState(10);
   const [color, setColor] = useState('text-dark');
 
-
   const start = () => {
     if (time > 0) {
       const timer = setInterval(() => {
