@@ -1,6 +1,6 @@
 import { createContext, useState, useCallback, useMemo, useEffect } from 'react';
 
-const TodosContext = createContext();
+export const TodosContext = createContext();
 
 
 const TodosProvider = ({ children }) => {
@@ -13,11 +13,10 @@ const TodosProvider = ({ children }) => {
 
   // Add a new todo (memoized)
   const addTodo = useCallback(() => {
-
     if (newTodo.trim() === "") return;
     setTodos(prev => [...prev, { text: newTodo, completed: false }]);
     setNewTodo("");
-  }, [setTodos, setNewTodo]);
+  }, [setTodos, setNewTodo, newTodo]);
 
   // Toggle completed status (memoized)
   const toggleTodo = useCallback(index => {
@@ -47,7 +46,7 @@ const TodosProvider = ({ children }) => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-  return <TodosContext.Provider value={{ todos, newTodo, addTodo, showCompleted, setShowCompleted, toggleTodo, visibleTodos, todosCount }}>{children}</TodosContext.Provider>
+  return <TodosContext.Provider value={{ todos, newTodo, addTodo, showCompleted, setShowCompleted, setNewTodo, toggleTodo, visibleTodos, todosCount }}>{children}</TodosContext.Provider>
 }
 
 export default TodosProvider

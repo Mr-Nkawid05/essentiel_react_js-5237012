@@ -1,4 +1,5 @@
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useContext } from 'react'
+import { TodosContext } from './context';
 import TodoList from "./TodoList";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
@@ -16,50 +17,7 @@ function Header() {
 */
 
 function TodoApp() {
-  const [todos, setTodos] = useState(() => {
-    const saved = localStorage.getItem("todos");
-    return saved ? JSON.parse(saved) : [];
-  });
-  const [newTodo, setNewTodo] = useState("");
-  const [showCompleted, setShowCompleted] = useState(true);
-
-  // Add a new todo (memoized)
-  const addTodo = useCallback(() => {
-
-    if (newTodo.trim() === "") return;
-    setTodos(prev => [...prev, { text: newTodo, completed: false }]);
-    setNewTodo("");
-  }, [setTodos, setNewTodo]);
-
-  // Toggle completed status (memoized)
-  const toggleTodo = useCallback(index => {
-    setTodos(prev =>
-      prev.map((todo, i) =>
-        i === index ? { ...todo, completed: !todo.completed } : todo
-      )
-    );
-  }, [setTodos]);
-
-  // useEffect(() => {
-  //   const completed = !showCompleted ? todos : todos.filter(todo => todo.completed)
-  //   setVisibleTodos(completed)
-  // }, [showCompleted, todos])
-
-  // Filtered todos (memoized)
-  const visibleTodos = useMemo(() => {
-    return !showCompleted ? todos : todos.filter(todo => todo.completed)
-  }, [showCompleted, todos])
-
-  const todosCount = useMemo(() => {
-    return todos.length > 0 ? todos.length + " todos" : ""
-  }, [todos])
-
-  // 2. définir useEffect pour sauvegarder en local
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
-
-
+  const { newTodo, addTodo, showCompleted, setNewTodo, setShowCompleted, toggleTodo, visibleTodos, todosCount } = useContext(TodosContext)
   return (
     <div style={{ padding: "1rem", maxWidth: 500 }}>
       <p className='mb-3'>{todosCount}</p>
