@@ -18,7 +18,10 @@ const CountdownTimer = () => {
   const increment = () => setTime((prevTime) => prevTime + 1);
   const decrement = () => setTime((prevTime) => prevTime - 1);
 
-  const changeColor = useCallback(() => setColor(time < 0 ? 'text-danger' : 'text-dark'), [setColor])
+  const changeColor = useCallback(() => {
+    console.log('changeColor')
+    setColor(time < 0 ? 'text-danger' : 'text-dark')
+  }, [setColor, time])
 
   useEffect(() => {
     // side effect
