@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
@@ -6,7 +6,7 @@ import './App.css'
 const CountdownTimer = () => {
   const [time, setTime] = useState(10);
   const [color, setColor] = useState('text-dark');
-  const [isVisible, setVisible] = useState(false)
+
 
   const start = () => {
     if (time > 0) {
@@ -24,10 +24,12 @@ const CountdownTimer = () => {
     setColor(time < 0 ? 'text-danger' : 'text-dark')
   }, [time])
 
-  useEffect(() => {
-    // side effect
-    setVisible(time < 0)
-  }, [time])
+  // useEffect(() => {
+  //   // side effect
+  //   setVisible(time < 0)
+  // }, [time])
+
+  const isVisible = useMemo(() => time < 0, [time])
   return (
     <div className="text-center">
       <h4><span className={color}>{time} </span>seconds</h4>
