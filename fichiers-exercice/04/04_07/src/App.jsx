@@ -9,7 +9,7 @@ function Header() {
 }
 
 /* 
-1. créer variable état pour gérer la liste de todo restant à compléter
+1. créer variable d'état pour gérer la liste de todo restant à compléter
 2. afficher le total de todos restant à compléter
 3. économiser sur les performances en évitant les recalculs et opérations inutiles
 4. respecter les règles de hooks (https://react.dev/warnings/invalid-hook-call-warning)
@@ -41,14 +41,9 @@ function TodoApp() {
   });
 
   // Filtered todos (memoized)
-  useEffect(() => {
-    const todosCompleted = showCompleted
-      ? todos
-      : todos.filter(todo => !todo.completed);
-    setVisibleTodos(todosCompleted)
-  }, [todos, showCompleted])
 
-  // 2. définir useEffect pour 
+
+  // 2. définir useEffect pour sauvegarder en local
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
