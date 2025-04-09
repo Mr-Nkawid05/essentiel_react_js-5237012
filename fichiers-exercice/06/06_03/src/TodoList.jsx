@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
+import React, { use } from "react";
 import { TodosContext } from "./context";
 
 const TodoList = React.memo(() => {
-  const { visibleTodos: todos, toggleTodo: onToggle } = useContext(TodosContext)
+  const { visibleTodos: todos, toggleTodo: onToggle } = use(TodosContext)
   // const { visibleTodos, toggleTodo } = useContext(TodosContext)
   console.log("Rendering TodoList...");
 
