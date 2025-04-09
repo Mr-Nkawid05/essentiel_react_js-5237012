@@ -1,11 +1,11 @@
-import { useContext } from 'react'
+import { use } from 'react'
 import { TodosContext } from './context';
 import TodoList from "./TodoList";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
 function TodoApp() {
-  const { newTodo, addTodo, showCompleted, setNewTodo, setShowCompleted, toggleTodo, visibleTodos, todosCount } = useContext(TodosContext)
+  const { newTodo, addTodo, showCompleted, setNewTodo, setShowCompleted } = use(TodosContext)
   return (
     <div className="card p-5 border-primary" style={{ padding: "1rem", maxWidth: 500 }}>
       <><h1 className='text-primary'>Todo List</h1><hr /></>
@@ -29,7 +29,6 @@ function TodoApp() {
           &nbsp; Show completed
         </label>
       </div>
-
       <TodoList />
     </div>
   );
