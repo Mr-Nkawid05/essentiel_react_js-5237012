@@ -42,7 +42,7 @@ function TodoApp() {
         </label>
       </div>
 
-      <TodoList todos={visibleTodos} onToggle={toggleTodo} />
+      <TodoList />
     </div>
   );
 }
