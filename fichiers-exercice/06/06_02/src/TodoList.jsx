@@ -16,6 +16,7 @@ const TodoList = React.memo(() => {
             cursor: "pointer",
             textDecoration: todo.completed ? "line-through" : "none",
           }}
+          className={todo.completed ? 'text-secondary' : ''}
         >
           {todo.text}
         </li>
