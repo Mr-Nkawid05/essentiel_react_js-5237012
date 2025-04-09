@@ -1,4 +1,4 @@
-import { useState, use, useEffect, useTransition } from 'react'
+import { useState, use, useEffect, useTransition, Suspense } from 'react'
 import { TodosContext } from './context';
 import TodoList from "./TodoList";
 import { WeatherComponent } from './WeatherComponent.jsx';
@@ -43,18 +43,13 @@ const Loading = () => {
   return <p className='text-info'>Loading ...</p>
 }
 const App = () => {
-  const [weather, setWeather] = useState(null)
-  const [isPending, startTransition] = useTransition()
-  useEffect(() => {
-    // startTransition
-    startTransition(async () => {
-      const weather = await fetchWeather("London")
-      setWeather(weather)
-    })
-  }, [])
+  const weatherPromise = fetchWeather("London")
+
   return (
     <div className="container d-flex justify-content-around align-items-center vh-100 vw-50">
-      {isPending ? <Loading /> : <WeatherComponent weatherData={weather} />}
+      <Suspense fallback={'Please wait while the data is loading ...'}>
+        <WeatherComponent weatherPromise={weatherPromise} />
+      </Suspense>
       <TodoApp />
     </div >
   );
