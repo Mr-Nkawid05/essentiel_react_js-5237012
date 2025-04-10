@@ -59,7 +59,7 @@ const App = () => {
 
   return (
     <div className="container d-flex justify-content-around align-items-center vh-100 vw-50">
-      <Suspense fallback={'Please wait while the data is loading ...'}>
+      <Suspense fallback={<Loading />}>
         <WeatherComponent weatherPromise={weatherPromise} />
       </Suspense>
       <TodoApp />
