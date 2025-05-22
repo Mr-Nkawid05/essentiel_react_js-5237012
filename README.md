@@ -6,7 +6,7 @@ Ce dossier Repository est lié au cours `L'essentiel de React.js`. Le cours enti
 
 La meilleure façon d'apprendre un langage est de l'utiliser dans la pratique. C'est pourquoi ce cours est intégré à GitHub Codespaces, un environnement de développement instantané « dans le nuage » qui offre toutes les fonctionnalités de votre IDE préféré sans nécessiter de configuration sur une machine locale. Avec Codespaces, vous pouvez vous exercer à partir de n'importe quelle machine, à tout moment, tout en utilisant un outil que vous êtes susceptible de rencontrer sur votre lieu de travail. Consultez la vidéo "Utiliser Codespaces sur GitHub" pour savoir comment démarrer.    
 
-DESCRIPTION DE LA FORMATION
+Apprenez à créer des interfaces dynamiques et performantes avec React, le framework JavaScript de Meta. Guidé par Sandy Ludosky, vous avancerez progressivement, de l’installation de votre environnement à la réalisation de projets concrets. Vous explorerez la syntaxe JSX, la gestion de l’état avec les hooks et l’optimisation des performances grâce aux Server Components et à l’API Contexte. Vous travaillerez avec des listes, des formulaires et découvrirez les bonnes pratiques du développement front-end. Des exercices pratiques et des défis vous aideront à maîtriser chaque concept, en vous appuyant sur des outils essentiels comme Codespaces.
 
 ## Instructions
 
