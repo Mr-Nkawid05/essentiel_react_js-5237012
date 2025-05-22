@@ -1,6 +1,6 @@
-# Nom final de la formation
+# L'essentiel de React.js
 
-Ce dossier Repository est lié au cours `Nom final de la formation`. Le cours entier est disponible sur [LinkedIn Learning][lil-course-url].
+Ce dossier Repository est lié au cours `L'essentiel de React.js`. Le cours entier est disponible sur [LinkedIn Learning][lil-course-url].
 
 ![Nom final de la formation][lil-thumbnail-url] 
 
@@ -41,7 +41,7 @@ La branche master correspond au code à la fin de la formation.
 Retrouvez mes autres formations sur [LinkedIn Learning](https://www.linkedin.com/learning/instructors/sandy-ludosky).
 
 [0]: # "Replace these placeholder URLs with actual course URLs"
-[lil-course-url]: https://www.linkedin.com/learning/l-essentiel-d-openai-et-des-modeles-de-langage-gpt
+[lil-course-url]: https://www.linkedin.com/learning/l-essentiel-de-react-js-25359283
 [lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQFGPBxhQJ7kmw/learning-public-crop_675_1200/B4EZb2Pn9MHMAY-/0/1747888013388?e=2147483647&v=beta&t=v0JuoBlVhonQX3RwwCX4KejDdvq_blF5IZwSMsfSBzs
 [lil-URL-trainer]: https://www.linkedin.com/learning/instructors/sandy-ludosky
 [1]: # "End of FR-Instruction ###############################################################################################"
