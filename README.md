@@ -32,7 +32,7 @@ La branche master correspond au code à la fin de la formation.
    - [**Vite**](https://vite.dev/guide/using-plugins.html): outil de développement (*build tool*) moderne pour démarrer et lancer les applications React, spécialement conçu pour améliorer la rapidité du développement. 
 
 2. Clonez ce dossier Repository sur votre machine locale (Mac), CMD (Windows), ou sur un outil GUI tel que SourceTree. 
-3. [Instructions spécifiques au cours] *TBC* 
+
 
 ### Formateur
 
