@@ -42,6 +42,6 @@ Retrouvez mes autres formations sur [LinkedIn Learning](https://www.linkedin.com
 
 [0]: # "Replace these placeholder URLs with actual course URLs"
 [lil-course-url]: https://www.linkedin.com/learning/l-essentiel-d-openai-et-des-modeles-de-langage-gpt
-[lil-thumbnail-url]: https://media.licdn.com/dms/image/D560DAQE2ATCfAQa_ng/learning-public-crop_675_1200/0/1685088353869?e=2147483647&v=beta&t=XsFBytWpLDvh5XqzP91VJVw9NM5zDP85c_fvj4nVyIg
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQFGPBxhQJ7kmw/learning-public-crop_675_1200/B4EZb2Pn9MHMAY-/0/1747888013388?e=2147483647&v=beta&t=v0JuoBlVhonQX3RwwCX4KejDdvq_blF5IZwSMsfSBzs
 [lil-URL-trainer]: https://www.linkedin.com/learning/instructors/sandy-ludosky
 [1]: # "End of FR-Instruction ###############################################################################################"
