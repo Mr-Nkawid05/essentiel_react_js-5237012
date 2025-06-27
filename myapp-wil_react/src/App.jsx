@@ -1,10 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 
-function Header(){
-  return(
+function Header() {
+  return (
     <>
       <a href="https://vite.dev" target="_blank">
         <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -15,30 +16,52 @@ function Header(){
     </>
   )
 }
-function CountdownTimer(){
-  const [time, setTime] = useState(10);
-  const start = () => {
-    if (time > 0) {
-      const start = () => {
-        if (time > 0) {
-          const timer = setInterval(() =>{
-            setTime((prevTimer) => prevTime - 1);
-          },1000);
-          return () => clearInterval(timer);
-        }
-      }
+function CountdownTimer() {
+  const [count, setCount] = useState(10);
+  const [isActive, setIsActive] = useState(false);
 
-      return(
-        <>
-        <p>{time} seconds</p>
-        <button className="btn btn-outline-secondary" onClick={start}>Go!</button>
-        </>
-      )
+  useEffect(() => {
+    let timer;
+
+    if (isActive && count > 0) {
+      timer = setInterval(() => {
+        setCount(prev => prev - 1);
+      }, 1000);
     }
-  }
+
+    return () => clearInterval(timer);
+  }, [isActive, count]);
+
+  const toggle = () => setIsActive(!isActive);
+  const reset = () => {
+    setIsActive(false);
+    setCount(10);
+  };
+
+  return (
+    <div style={{ textAlign: 'center' }}>
+      {count > 0 ? (
+        <h1 style={{ fontSize: '3rem' }}>
+          {count} {count === 1 ? 'second' : 'seconds'}
+        </h1>
+      ) : (
+        <>
+          <h1 style={{ fontSize: '3rem', color: 'red' }}>0 second</h1>
+          <div style={{ fontSize: '2rem' }}>💥 BOOM 💥</div>
+        </>
+      )}
+
+      <div style={{ marginTop: '20px' }}>
+        <button onClick={toggle}>
+          {isActive ? 'Pause' : 'Start'}
+        </button>
+        <button onClick={reset} style={{ marginLeft: '10px' }}>Reset</button>
+      </div>
+    </div>
+  );
 }
 
-function Counter (){
+function Counter() {
   const [count, setCount] = useState(0)
   return (
     <div className="card">
@@ -52,12 +75,12 @@ function Counter (){
   )
 }
 
-function Title ({ content }) {
-  return <h1> {content}</h1>
+function Title({ content }) {
+  return <h1 className="text-success"> {content}</h1>
 }
 
-function Welcome({name}){
-  return (<h2>Hello { name } </h2>)
+function Welcome({ name }) {
+  return (<h2>Hello {name} </h2>)
 }
 
 function Footer() {
@@ -67,15 +90,15 @@ function Footer() {
 }
 
 function App() {
-  
- return (
+
+  return (
     <>
-      <Header />
-     <Title content="Mon Premier projet React"/>
-     <CountdownTimer />
-     <Welcome name="Sandra" />
-      <Counter />
-     {/*<Footer />*/}
+      {/*<Header />*/}
+      <Title content="CountdownTimer" />
+      <CountdownTimer />
+      {/*<Welcome name="Sandra" />*/}
+      {/*<Counter />*/}
+      {/*<Footer />*/}
     </>
   )
 }
